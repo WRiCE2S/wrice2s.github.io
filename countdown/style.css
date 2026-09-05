@@ -129,12 +129,6 @@ h1 {
   margin: 1rem 0 0;
 }
 
-.fine-print {
-  margin: 2rem 0 0;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
 @media (max-width: 520px) {
   .countdown-grid {
     grid-template-columns: repeat(2, 1fr);

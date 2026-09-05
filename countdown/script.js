@@ -1,11 +1,10 @@
 (function () {
   "use strict";
 
-  // Fixed target instant: 5 January 2029, 00:00:00 local time in Walvis Bay,
-  // Namibia (UTC+2, no daylight saving). Encoding the UTC+2 offset directly
-  // in the ISO string makes the underlying instant identical for every
-  // visitor, no matter what time zone their own device is set to.
-  var TARGET_DATE = new Date("2029-01-05T00:00:00+02:00").getTime();
+  // Fixed target instant: 5 January 2029, 00:00:00 Universal Time (UTC).
+  // Using an explicit "Z" offset makes the underlying instant identical
+  // for every visitor, no matter what time zone their own device is set to.
+  var TARGET_DATE = new Date("2029-01-05T00:00:00Z").getTime();
 
   var elements = {
     days: document.getElementById("days"),
