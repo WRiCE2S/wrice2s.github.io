@@ -9,18 +9,12 @@
     :root {
       --bg: #081821;
       --text: #f4f7f8;
-      --muted: rgba(244, 247, 248, 0.68);
+      --muted: rgba(244, 247, 248, 0.62);
       --accent: #7fd8d2;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      min-height: 100%;
-    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
 
     body {
       min-height: 100vh;
@@ -39,11 +33,19 @@
     }
 
     h1 {
-      margin: 0 0 3.2rem;
+      margin: 0;
       font-size: clamp(5rem, 15vw, 10rem);
       font-weight: 600;
       letter-spacing: 0.08em;
       line-height: 0.9;
+    }
+
+    .acronym {
+      margin: 0.8rem 0 3rem;
+      font-size: clamp(0.68rem, 1.2vw, 0.9rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--muted);
     }
 
     .science {
@@ -90,17 +92,12 @@
     }
 
     @media (max-width: 600px) {
-      h1 {
-        margin-bottom: 2.5rem;
+      .acronym {
+        margin-bottom: 2.4rem;
+        letter-spacing: 0.04em;
       }
-
-      .science {
-        letter-spacing: 0.12em;
-      }
-
-      .region {
-        letter-spacing: 0.16em;
-      }
+      .science { letter-spacing: 0.12em; }
+      .region { letter-spacing: 0.16em; }
     }
   </style>
 </head>
@@ -108,13 +105,11 @@
 <body>
   <main class="container">
     <h1>WRiCE</h1>
-
+    <p class="acronym">Walvis Ridge Discovery &amp; Capacity Strengthening Expedition</p>
     <p class="science">South–South deep-sea science</p>
-
     <p class="exploration">Exploration</p>
     <div class="plus">+</div>
     <p class="capacity">Capacity strengthening</p>
-
     <p class="region">Across the South Atlantic</p>
   </main>
 </body>
